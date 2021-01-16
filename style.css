@@ -1,0 +1,39 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background:linear-gradient(to right,#2518e2,#2cee1a);
+}
+img{
+    width:300px;
+}
+.container{
+    width:400px;
+    margin:20px auto;
+    text-align: center;
+}
+.container h1{
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding:5px;
+    margin-bottom: 8px;
+}
+span{
+    display: block;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+input{
+    display:block;
+    margin: auto;
+    padding: 8px 16px;
+    width:300px;
+    border:none;
+    border-radius: 5px;
+}
+form{
+    margin-bottom: 10px;
+}
