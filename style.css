@@ -26,6 +26,11 @@ span{
     letter-spacing: 1px;
     font-size: 20px;
 }
+label{
+    font-size: 18px;
+    font-weight:400;
+    letter-spacing: 1px;
+}
 input{
     display:block;
     margin: auto;
@@ -33,6 +38,7 @@ input{
     width:300px;
     border:none;
     border-radius: 5px;
+    margin-top:5px;
 }
 form{
     margin-bottom: 10px;
