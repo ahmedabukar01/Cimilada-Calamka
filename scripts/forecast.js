@@ -8,6 +8,11 @@ const getCity = async (city) =>{
     const data = await response.json();
     return data[0];
 }
-// getCity('london').then(data=>{
-//     console.log(data);
-// })
+const getWeather = async (id)=>{
+    const base = 'http://dataservice.accuweather.com/currentconditions/v1/';
+    const query = `${id}?apikey=${key}`;
+
+    const res = await fetch(base + query);
+    const data = await res.json();
+    return data[0];
+}
