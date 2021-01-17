@@ -49,6 +49,9 @@ input{
 form{
     margin-bottom: 10px;
 }
+.d-none{
+    display:none;
+}
 .icon{
     width:70px;
     background:rgb(228, 223, 223);
@@ -57,4 +60,9 @@ form{
     line-height: 1px;
     top:-45px;
     margin-bottom: -40px;
+}
+#weather-info{
+    background:rgb(165, 165, 177);
+    width:300px;
+    margin:0 auto;
 }

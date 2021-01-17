@@ -4,6 +4,7 @@ const cityName = document.querySelector('#city-name');
 const cloud = document.querySelector('#cloud');
 const icon = document.querySelector('.icon');
 const imgStatus = document.querySelector('.bg-image');
+const display = document.querySelector('#weather-info');
 
 form.addEventListener('submit',e=>{
     e.preventDefault();
@@ -26,7 +27,6 @@ const  getApiData = async(city) =>{
 
 function updataDom(data){
     const {cityInfo, weatherInfo} = data;
-    console.log(cityInfo, weatherInfo);
     cityName.textContent = cityInfo.EnglishName;
     cloud.textContent = weatherInfo.WeatherText;
     deg.innerHTML =  `${weatherInfo.Temperature.Metric.Value}&deg; C`;
@@ -43,7 +43,8 @@ function updataDom(data){
     const iconSrc = `img/icons/${weatherInfo.WeatherIcon}.svg`;
     icon.setAttribute('src',iconSrc);
 
-    if()
-
+    if(display.classList.contains('d-none')){
+        display.classList.remove('d-none');
+    }
 }
 
