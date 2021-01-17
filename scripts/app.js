@@ -2,9 +2,14 @@ const form = document.querySelector('form');
 const deg = document.querySelector('#deg');
 const cityName = document.querySelector('#city-name');
 const cloud = document.querySelector('#cloud');
+const icon = document.querySelector('.icon');
+const imgStatus = document.querySelector('.bg-image');
+
 form.addEventListener('submit',e=>{
     e.preventDefault();
     const city = form.city.value.trim();
+    form.reset();
+
     getApiData(city)
     .then(data=>updataDom(data))
     .catch(err=>console.log(err.message));
@@ -25,5 +30,20 @@ function updataDom(data){
     cityName.textContent = cityInfo.EnglishName;
     cloud.textContent = weatherInfo.WeatherText;
     deg.innerHTML =  `${weatherInfo.Temperature.Metric.Value}&deg; C`;
+
+    let imgSrc = '';
+    // const imgSrc = weatherInfo.IsDayTime? 'img/day.svg' : 'img/night.svg';
+    if(weatherInfo.IsDayTime){
+        imgSrc = 'img/day.svg';
+    } else{
+        imgSrc = 'img/night.svg';
+    }
+    imgStatus.setAttribute('src', imgSrc);
+
+    const iconSrc = `img/icons/${weatherInfo.WeatherIcon}.svg`;
+    icon.setAttribute('src',iconSrc);
+
+    if()
+
 }
 

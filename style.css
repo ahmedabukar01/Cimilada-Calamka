@@ -25,11 +25,17 @@ span{
     font-weight: 400;
     letter-spacing: 1px;
     font-size: 20px;
+    margin: 5px 0;
 }
 label{
     font-size: 18px;
     font-weight:400;
     letter-spacing: 1px;
+}
+#city-name{
+    font-size: 22px;
+    font-weight: bolder;
+    margin-bottom: 7px;
 }
 input{
     display:block;
@@ -42,4 +48,13 @@ input{
 }
 form{
     margin-bottom: 10px;
+}
+.icon{
+    width:70px;
+    background:rgb(228, 223, 223);
+    border-radius: 70px;
+    position: relative;
+    line-height: 1px;
+    top:-45px;
+    margin-bottom: -40px;
 }
