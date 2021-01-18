@@ -1,3 +1,5 @@
+// this app is undermaintenance
+// i got a bug and soon working on it to fix.
 const form = document.querySelector('form');
 const deg = document.querySelector('#deg');
 const cityName = document.querySelector('#city-name');
@@ -48,3 +50,21 @@ function updataDom(data){
     }
 }
 
+// local storage
+localStorage.name="ahmed";
+localStorage.setItem('age',20);
+
+const name = localStorage.name;
+const age = localStorage.age;
+console.log(name,age);
+const unknown = localStorage.getItem('age');
+console.log(unknown);
+localStorage.removeItem('name');
+localStorage.clear();
+
+const todos = [
+    {text:'hacking the the computers', author:'ahmed'},
+    {text:'goes to school', author:'abukar'},
+    {text:'leads the world', author:'cumar'}
+];
+console.log(name)
