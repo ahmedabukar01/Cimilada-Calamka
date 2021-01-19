@@ -16,6 +16,8 @@ form.addEventListener('submit',e=>{
     getApiData(city)
     .then(data=>updataDom(data))
     .catch(err=>console.log(err.message));
+
+    localStorage.setItem('city', city);
 });
 const  getApiData = async(city) =>{
     const cityInfo = await getCity(city);
@@ -51,20 +53,8 @@ function updataDom(data){
 }
 
 // local storage
-localStorage.name="ahmed";
-localStorage.setItem('age',20);
-
-const name = localStorage.name;
-const age = localStorage.age;
-console.log(name,age);
-const unknown = localStorage.getItem('age');
-console.log(unknown);
-localStorage.removeItem('name');
-localStorage.clear();
-
-const todos = [
-    {text:'hacking the the computers', author:'ahmed'},
-    {text:'goes to school', author:'abukar'},
-    {text:'leads the world', author:'cumar'}
-];
-console.log(name)
+if(localStorage.getItem('city')){
+    getApiData(localStorage.city)
+    .then(data=>updataDom(data))
+    .then(err=>console.log(err));
+}
