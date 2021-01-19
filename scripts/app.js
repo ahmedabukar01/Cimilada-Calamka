@@ -1,5 +1,3 @@
-// this app is undermaintenance
-// i got a bug and soon working on it to fix.
 const form = document.querySelector('form');
 const deg = document.querySelector('#deg');
 const cityName = document.querySelector('#city-name');
