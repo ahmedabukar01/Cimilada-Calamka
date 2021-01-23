@@ -17,6 +17,7 @@ form.addEventListener('submit',e=>{
 
     localStorage.setItem('city', city);
 });
+
 const  getApiData = async(city) =>{
     const cityInfo = await getCity(city);
     const weatherInfo = await getWeather(cityInfo.Key);
