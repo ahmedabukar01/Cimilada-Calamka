@@ -56,5 +56,5 @@ function updataDom(data){
 if(localStorage.getItem('city')){
     getApiData(localStorage.city)
     .then(data=>updataDom(data))
-    .then(err=>console.log(err));
+    .catch(err=>console.log(err));
 }
