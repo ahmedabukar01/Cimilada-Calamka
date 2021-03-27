@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background:linear-gradient(to right,#b6e218,#2cee1a);
+    background:#444;
 }
 img{
     width:300px;
